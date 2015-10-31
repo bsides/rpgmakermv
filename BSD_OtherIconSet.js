@@ -155,6 +155,13 @@ Window_ItemStatus.prototype.drawLargeIcon = function() {
 };
 
 //=============================================================================
-// End of File
+// Preloads the IconSet
+//=============================================================================
+if (Yanfly.Param.ItemOtherIconImage !== '' || typeof Yanfly.Param.ItemOtherIconImage !== 'undefined') {
+  ImageManager.loadSystem(Yanfly.Param.ItemOtherIconImage);
+};
+
+//=============================================================================
+// End of file
 //=============================================================================
 };

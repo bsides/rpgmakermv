@@ -19,15 +19,15 @@ BSIDES.OIS = BSIDES.OIS || {};
  *
  * @param Icon Image
  * @desc The other, generally a bigger IconSet image.
- * @default BigIconSet
+ * @default OtherIconSet
  *
  * @param Icon Width
  * @desc The width of each icon in this other IconSet.
- * @default 75
+ * @default 48
  *
  * @param Icon Height
  * @desc The height of each icon in this other IconSet.
- * @default 100
+ * @default 48
  *
  * @param Icon Smooth
  * @desc Should we render the icon smoothly?
@@ -38,12 +38,12 @@ BSIDES.OIS = BSIDES.OIS || {};
  * ============================================================================
  * How to?
  * ============================================================================
- * 
+ *
  * Don't forget to configure the parameters. They are pretty self explainable,
  * but if you need further help, here it goes:
  *
  * - The new IconSet image should be placed in img/system/NAME_OF_ICONSET.png.
- * Replace NAME_OF_ICONSET with the file name of your image, 
+ * Replace NAME_OF_ICONSET with the file name of your image,
  * for example: BigIconSet.png
  *
  * - Width and Height are defined by each icon inside your iconset data. Just
@@ -52,18 +52,18 @@ BSIDES.OIS = BSIDES.OIS || {};
  *
  * - To define which icon to use in your item / equip / skill, just put in the
  * notetag the ROW and COLUMN that is located that item square inside your
- * IconSet. For example, if you were using the default iconset, 
+ * IconSet. For example, if you were using the default iconset,
  * the heart icon would be <bicon row: 6> and <bicon column: 5>.
  *
  * - Why "bicon"?
  * The first time I made this plugin I thought naming it "Bigger IconSet", but
  * as I worked on it, it became more generic than that.
- * 
+ *
  * ============================================================================
  * Notetags
  * ============================================================================
  *
- * It's super simple. Just inform the row and column placement of the icon 
+ * It's super simple. Just inform the row and column placement of the icon
  * in your new IconSet with the notetags.
  * <bicon row: y>
  * <bicon column: x>

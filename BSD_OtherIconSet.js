@@ -2,7 +2,7 @@
 // BSIDES Other IconSet Extension
 // for Yanfly Engine Plugins - Item Core
 // BSD_ItemBigImage.js
-// Version: 1.0
+// Version: 1.1
 //=============================================================================
 
 var Imported = Imported || {};

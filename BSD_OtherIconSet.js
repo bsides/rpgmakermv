@@ -70,7 +70,7 @@ BSIDES.OIS = BSIDES.OIS || {};
  *
  */
 //=============================================================================
-if ((Imported.YEP_ItemCore) && (Imported.YEP_ShopMenuCore)) {
+if (Imported.YEP_ItemCore) {
 
 //=============================================================================
 // Parameter Variables
@@ -154,7 +154,9 @@ Window_ItemStatus.prototype.drawLargeIcon = function() {
   this.contents.blt(bitmap, sx, sy, pw, ph, dx, dy, dw, dh);
   this.contents._context.imageSmoothingEnabled = true;
 };
-Window_ShopInfo.prototype.drawLargeIcon = Window_ItemStatus.prototype.drawLargeIcon;
+if (Imported.YEP_ShopMenuCore) {
+  Window_ShopInfo.prototype.drawLargeIcon = Window_ItemStatus.prototype.drawLargeIcon;
+};
 
 //=============================================================================
 // Preloads the IconSet

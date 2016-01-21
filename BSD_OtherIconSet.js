@@ -70,7 +70,7 @@ BSIDES.OIS = BSIDES.OIS || {};
  *
  */
 //=============================================================================
-if (Imported.YEP_ItemCore) {
+if ((Imported.YEP_ItemCore) && (Imported.YEP_ShopMenuCore)) {
 
 //=============================================================================
 // Parameter Variables
@@ -108,17 +108,18 @@ DataManager.processNewNotetags = function(group) {
     for (var i = 0; i < notedata.length; i++) {
       var line = notedata[i];
       if (line.match(note4)) {
-        obj.otherImageIconIndex.column = parseInt(RegExp.$1);
-      } else if (line.match(note5)) {
         obj.otherImageIconIndex.row = parseInt(RegExp.$1);
+      } else if (line.match(note5)) {
+        obj.otherImageIconIndex.column = parseInt(RegExp.$1);
       }
-   }
- }
+    }
+  }
 };
 Window_ItemStatus.prototype.drawLargeIcon = function() {
   var iconIndex = 0;
   var theImage = '';
   var isOtherImageDefined = false;
+  if (!this._item) return;
   if (Object.keys(this._item.otherImageIconIndex).length > 0) {
     iconIndex = this._item.otherImageIconIndex;
     isOtherImageDefined = true;
@@ -153,6 +154,7 @@ Window_ItemStatus.prototype.drawLargeIcon = function() {
   this.contents.blt(bitmap, sx, sy, pw, ph, dx, dy, dw, dh);
   this.contents._context.imageSmoothingEnabled = true;
 };
+Window_ShopInfo.prototype.drawLargeIcon = Window_ItemStatus.prototype.drawLargeIcon;
 
 //=============================================================================
 // Preloads the IconSet
